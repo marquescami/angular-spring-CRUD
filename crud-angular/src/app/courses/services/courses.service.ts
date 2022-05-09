@@ -8,14 +8,14 @@ import { Course } from './../model/course';
   providedIn: 'root',
 })
 export class CoursesService {
-  private readonly API = '/assets/courses.json';
+  private readonly API = '/assets/acourses.json';
 
   constructor(private httpClient: HttpClient) {}
 
   list() {
     return this.httpClient.get<Course[]>(this.API).pipe(
       first(),
-      delay(15000),
+      delay(5000),
       tap((courses) => console.log(courses))
       //verifica os dados na conexão com o servidor
     );
