@@ -1,6 +1,6 @@
 export interface Course {
   _id:string;
-  name: String;
+  name: string;
   category: string;
 
 

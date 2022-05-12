@@ -14,11 +14,17 @@ export class CoursesService {
   constructor(private httpClient: HttpClient) {}
 
   list() {
-    return this.httpClient.get<Course[]>(this.API).pipe(
-      first(),
+    return this.httpClient.get<Course[]>(this.API)
+    .pipe(
+     first(),
      // delay(5000),
       tap((courses) => console.log(courses))
       //verifica os dados na conexão com o servidor
     );
+  }
+
+
+  save(record: Course) {
+    return this.httpClient.post<Course>(this.API, record).pipe(first());
   }
 }

@@ -1,0 +1,18 @@
+mat-card {
+  //tamanho maximo for formulario em relação a tela
+  max-width: 80%;
+
+  margin: 2em auto;
+  text-align: center;
+}
+
+.full-width{
+  //largura de  100% do formulario
+  width: 100%;
+}
+
+//tamanho minimo do formulario
+.min-width {
+  width: 100%;
+  min-width: 150px;
+}
